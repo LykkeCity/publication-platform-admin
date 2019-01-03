@@ -1,0 +1,125 @@
+.form-control {
+  background: getColor(white);
+  border: 1px solid getColor(dusty-white);
+  font-weight: getFontWeight(medium);
+  font-size: rem(14px);
+  font-family: $font-default  ;
+  letter-spacing: 0;
+  box-shadow: none !important;
+  color: getColor(text) !important;
+
+  &:focus {
+    outline: none;
+    border-color: getColor(primary);
+  }
+
+  @include placeholder {
+    color: getColor(dark-grey);
+  }
+}
+
+.input-group {
+  .form-control {
+    border-radius: $border-radius !important;
+  }
+
+  .input-group-append {
+    position: absolute;
+    right: 0;
+    z-index: 10;
+
+    .btn {
+      height: 100%;
+      border-radius: 0 !important;
+      padding: rem(5px 8px);
+    }
+  }
+}
+
+.btn-icon {
+  background-color: transparent;
+  color: getColor(dark-grey);
+
+  .icon {
+    font-size: rem(24px);
+    line-height: normal;
+    color: inherit;
+  }
+
+  &:hover {
+    color: getColor(primary);
+  }
+}
+
+@media (min-width: 576px) {
+  .form-inline .input-group, .form-inline .custom-select {
+    width: 100%;
+  }
+}
+
+.btn {
+  font-family: $font-default;
+  font-weight: getFontWeight(semibold);
+  font-size: rem(14px);
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.btn-light {
+  border-color: rgba(getColor(primary), .16);
+  background-color: getColor(white);
+  color: getColor(primary);
+
+  &:not(:disabled):not(.disabled).active {
+    background-color: getColor(primary);
+    color: getColor(white);
+    border-color: getColor(primary);
+    box-shadow: 0 0 8px 0 rgba(0,60,255,0.24);
+  }
+
+  &:not(:disabled):not(.disabled):not(.active):hover {
+    background-color: rgba(getColor(primary), .1);
+    z-index: 10;
+  }
+}
+
+.custom-control-label {
+  font-weight: getFontWeight(semibold);
+  font-size: rem(14px);
+  line-height: rem(24px);
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    background: getColor(white);
+    border: 1px solid rgba(0,60,255,0.16);
+    left: -2rem;
+  }
+
+  &:after {
+    left: -2rem;
+  }
+}
+
+.custom-control {
+  padding-left: 2rem;
+}
+
+.custom-control-input {
+  &:focus ~ .custom-control-label::before {
+    box-shadow: none;
+  }
+  &:checked  ~ .custom-control-label::before {
+    box-shadow: 0 0 8px 0 rgba(0,60,255,0.24);
+    background-color: getColor(primary);
+  }
+}
+
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: getColor(primary);
+}
+
+.form-group {
+  margin-bottom: rem(12px);
+}

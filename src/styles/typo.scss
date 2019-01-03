@@ -1,0 +1,101 @@
+a:focus, input:focus, button:focus { outline: none !important; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all $transition;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+body{
+  font-family: $font-default;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5 {
+  margin-top: 0;
+  color: inherit;
+  line-height: 1.4;
+  font-weight: getFontWeight(semibold);
+  font-family: $font-default;
+}
+
+h1, .h1 {
+  font-size: rem(getFontSize(h1));
+  line-height: normal;
+  margin-bottom: rem(20px);
+  letter-spacing: 0;
+  font-weight: getFontWeight(black);
+}
+
+h2, .h2 {
+  font-size: rem(getFontSize(h2));
+  font-weight: getFontWeight(bold);
+  letter-spacing: -0.5px;
+  line-height: rem(52px);
+  margin-bottom: rem(90px);
+}
+
+h3, .h3 {
+  font-size: rem(getFontSize(h3));
+  line-height: rem(50px);
+  font-weight: getFontWeight(bold);
+  margin-bottom: rem(30px);
+}
+
+h4, .h4 {
+  font-size: rem(getFontSize(h4));
+  margin-bottom: rem(15px);
+}
+
+h5, .h5 {
+  font-size: rem(getFontSize(h5));
+  text-transform: uppercase;
+  color: inherit;
+  margin-bottom: 2px;
+  letter-spacing: 1px;
+  font-weight: getFontWeight(semibold);
+}
+
+p {
+  font-size: rem(22px);
+  margin-bottom: 1rem;
+  line-height: rem(32px);
+
+  &.lead {
+    font-family: $font-default;
+    line-height: 25px;
+    font-weight: getFontWeight(semibold) !important;
+  }
+}
+
+hr {
+  border-top-color: #EBEDEF;
+  margin: 12px 0;
+}
+
+@media (#{$max_tablets--landscape}), (max-height: $screen-mobile-old) {
+}
+
+@media (#{$max_tablets--portrait}) {
+  h2, .h2 {
+    font-size: rem(30px);
+    line-height: rem(32px);
+    margin-bottom: rem(32px);
+  }
+
+  p {
+    font-size: rem(18px);
+    line-height: rem(28px);
+  }
+
+}
+
+@media (#{$max_phones}) {
+}

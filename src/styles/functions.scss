@@ -1,0 +1,44 @@
+@import 'vars';
+@import "sass-rem";
+
+$rem-baseline: 16px;
+
+@function getColor($name) {
+  @return map-get($colors, $name);
+}
+
+@function getFontSize($name) {
+  @return map-get($font-sizes, $name);
+}
+
+@function getFontWeight($name) {
+  @return map-get($font-weights, $name);
+}
+
+@function getZIndex($name) {
+  @return map-get($layers, $name);
+}
+
+@keyframes rotate {
+   0% {
+     transform: rotate(0deg);
+   }
+
+   100% {
+     transform: rotate(360deg);
+   }
+ }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

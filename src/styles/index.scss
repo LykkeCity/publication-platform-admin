@@ -1,0 +1,119 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import "~bootstrap/scss/utilities";
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/grid';
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/custom-forms";
+@import '~bootstrap/scss/tooltip';
+@import '~bootstrap/scss/popover';
+@import '~bootstrap/scss/list-group';
+@import '~bootstrap/scss/card';
+@import '~bootstrap/scss/nav';
+@import '~bootstrap/scss/navbar';
+@import '~bootstrap/scss/badge';
+
+@import 'styles/fonts';
+@import 'styles/vars';
+@import 'styles/functions';
+@import 'styles/mixins';
+@import 'styles/typo';
+@import "styles/forms";
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  overflow: visible !important;
+  font-size: 1rem;
+  position: relative;
+
+  @media (#{$max_laptop--small}) {
+    font-size: 12px;
+  }
+
+  @media (#{$max_phones}) {
+    font-size: 10px;
+  }
+}
+
+body {
+  font: 400 rem(getFontSize(regular)) $font-default;
+  color: getColor(text);
+  background-color: getColor(white);
+  line-height: normal;
+  position: static;
+  -webkit-overflow-scrolling: touch;
+
+  -webkit-text-size-adjust: none;
+  font-size-adjust: none;
+  text-rendering: optimizeLegibility;
+
+  @include fontantialias(true);
+
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  width: 1220px + 30px;
+  max-width: 100%;
+}
+
+[data-toggle=buttons]>.btn input[type=radio],
+[data-toggle=buttons]>.btn-group>.btn input[type=radio],
+[data-toggle=buttons]>.btn input[type=checkbox],
+[data-toggle=buttons]>.btn-group>.btn input[type=checkbox] {
+  position: absolute;
+  clip: rect(0,0,0,0);
+  pointer-events: none;
+}
+
+.main {
+  padding-bottom: rem(96px);
+}
+
+.content {
+  padding-bottom: rem(40px);
+}
+
+.text-success {
+  color: getColor(green) !important;
+}
+
+.text-danger {
+  color: getColor(red) !important;
+}
+
+
+#theContent{
+  overflow:auto;
+   height:100%;
+   padding: 20px;
+}
+
+.dialog-system{
+  text-align: right;
+  padding: 15px;
+}
+.close svg{
+  width: 16px;
+  cursor: pointer;
+}
+
+
+.dialog-content{
+  margin-left: 40px;
+  margin-right: 40px;
+}
